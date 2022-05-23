@@ -27,7 +27,7 @@ const createBundleHtml = async (template, components, bundle) => {
     }
 
     let data = await fs.promises.readFile(template, 'utf8');
-    for (let part in templatesData) {
+    for (const part in templatesData) {
         data = data.replace(`{{${part}}}`, templatesData[part]);
     }
 
