@@ -68,8 +68,8 @@ const buildProject = async () => {
         await fs.promises.mkdir(projectDist, { recursive: true });
 
         await createBundleHtml(templateHtml, componentsHtml, projectDistHtml);
-        await createCopyDir(assets, projectDistAssets);
         await createBundleCss(stylesCss, projectDistCss);
+        await createCopyDir(assets, projectDistAssets);
     } catch (e) {
         console.log(e);
     }
