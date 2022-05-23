@@ -10,7 +10,7 @@ const stylesCss = path.join(__dirname, 'styles');
 const projectDistAssets = path.join(__dirname, 'project-dist', 'assets');
 const assets = path.join(__dirname, 'assets');
 
-const createBundleHtml =  async (template, components, bundle) => {
+const createBundleHtml = async (template, components, bundle) => {
     let templatesData = {};
     const files = await fs.promises.readdir(components, { withFileTypes: true });
 
